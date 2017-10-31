@@ -26,6 +26,7 @@ def self.drop_table
   sql = <<-SQL
   DROP TABLE IF EXISTS students
   SQL
+  
   DB[:conn].execute(sql)
 end
 
@@ -45,7 +46,7 @@ end
 
 def update
   sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
-  
+
 end
 
 def self.create(name:, grade:)
